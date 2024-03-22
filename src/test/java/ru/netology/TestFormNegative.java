@@ -27,10 +27,10 @@ public class TestFormNegative {
     // Отправка формы с пустым полем Город
     @Test
     public void cityNull() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("+70000000000");
         $("[data-test-id='agreement']").click();
@@ -41,10 +41,10 @@ public class TestFormNegative {
     // Заполнение поля Город на латинице
     @Test
     public void cityEnglish() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Kemerovo");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("+70000000000");
         $("[data-test-id='agreement']").click();
@@ -55,10 +55,10 @@ public class TestFormNegative {
     // Заполнение поля Город. Городом не из административного центра субъектов РФ
     @Test
     public void cityNonAdministarative() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Новокузнецк");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("+70000000000");
         $("[data-test-id='agreement']").click();
@@ -70,7 +70,7 @@ public class TestFormNegative {
     //Отправка формы с пустым полем дата встречи
     @Test
     public void dataNull() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
@@ -84,10 +84,10 @@ public class TestFormNegative {
     // Отправка формы с пустым именем
     @Test
     public void nameNull() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("");
         $("[data-test-id='phone'] input").setValue("+70000000000");
         $("[data-test-id='agreement']").click();
@@ -98,10 +98,10 @@ public class TestFormNegative {
     // Заполнение поля Имя и Фамилия цифрами
     @Test
     public void nameNumber() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("888");
         $("[data-test-id='phone'] input").setValue("+70000000000");
         $("[data-test-id='agreement']").click();
@@ -112,10 +112,10 @@ public class TestFormNegative {
     // Заполнение поля Имя и Фамилия символами
     @Test
     public void nameSymbol() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("...");
         $("[data-test-id='phone'] input").setValue("+70000000000");
         $("[data-test-id='agreement']").click();
@@ -126,10 +126,10 @@ public class TestFormNegative {
     // Заполнение поля Фамилия и Имя на латиницу
     @Test
     public void nameEnglish() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Ivanov Ivan");
         $("[data-test-id='phone'] input").setValue("+70000000000");
         $("[data-test-id='agreement']").click();
@@ -140,10 +140,10 @@ public class TestFormNegative {
     // Отправка формы с пустым полем номер телеофна
     @Test
     public void phoneNull() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("");
         $("[data-test-id='agreement']").click();
@@ -154,10 +154,10 @@ public class TestFormNegative {
     // Ввести номер телефона  без "+7"
     @Test
     public void invalidPhone() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("89039080000");
         $("[data-test-id='agreement']").click();
@@ -168,10 +168,10 @@ public class TestFormNegative {
     // Заполнение поля номер телефона символами
     @Test
     public void phoneSymbol() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("...");
         $("[data-test-id='agreement']").click();
@@ -182,10 +182,10 @@ public class TestFormNegative {
     //Ввести номер телефона с 12 цифрами
     @Test
     public void phoneOverEleven() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("+790390800000");
         $("[data-test-id='agreement']").click();
@@ -196,10 +196,10 @@ public class TestFormNegative {
     // Ввесьти номер с 1 цифрой
     @Test
     public void phoneOne() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("+7");
         $("[data-test-id='agreement']").click();
@@ -210,10 +210,10 @@ public class TestFormNegative {
     // Ввести номер телефона буквами
     @Test
     public void phoneWord() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("aaa");
         $("[data-test-id='agreement']").click();
@@ -224,10 +224,10 @@ public class TestFormNegative {
     // Не ставить галочку
     @Test
     public void agreementNull() {
-        String Date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String date = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='city'] input").setValue("Кемерово");
         $("[data-test-id='date'] input").doubleClick().sendKeys(BACK_SPACE);
-        $("[data-test-id='date'] input").setValue(Date);
+        $("[data-test-id='date'] input").setValue(date);
         $("[data-test-id='name'] input").setValue("Иван Иванов");
         $("[data-test-id='phone'] input").setValue("+79039080000");
         $(byText("Забронировать")).click();
